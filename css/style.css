@@ -1,3 +1,12 @@
+:root{
+    --asidewidth:80px;
+}
+
+/* general */
+
+.mybg-darkerblue{
+    background-color:#165BBA
+}
 /* header */
 
 .logo-container{
@@ -6,4 +15,35 @@
 
 .dropdown-toggle::after{
     display:none;
+}
+
+header{
+    height:90px;
+}
+
+/* main */
+
+
+aside{
+    width:var(--asidewidth);
+    height:calc(100vh - 90px);
+    background-image:url(../img/sidebar-bg.png);
+    background-color:#051E34;
+    position:sticky;
+}
+
+aside .container-fluid{
+    height:100%;
+}
+
+.mymain-container{
+    width:calc(100% - var(--asidewidth));
+    
+}
+
+
+@media screen and (min-width:992px){
+    :root{
+        --asidewidth:150px;
+    }
 }
