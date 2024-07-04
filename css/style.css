@@ -19,6 +19,10 @@
 
 header{
     height:90px;
+    position:sticky;
+    top:0;
+    z-index:2;
+    background-color:white;
 }
 
 /* main */
@@ -26,10 +30,10 @@ header{
 
 aside{
     width:var(--asidewidth);
-    height:calc(100vh - 90px);
     background-image:url(../img/sidebar-bg.png);
     background-color:#051E34;
-    position:sticky;
+    position:fixed;
+    height:calc(100% - 90px)
 }
 
 aside .container-fluid{
@@ -38,6 +42,7 @@ aside .container-fluid{
 
 .mymain-container{
     width:calc(100% - var(--asidewidth));
+    margin-left:var(--asidewidth);
     
 }
 td{
