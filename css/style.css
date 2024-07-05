@@ -40,6 +40,23 @@ aside .container-fluid{
     height:100%;
 }
 
+aside ul{
+    list-style:none;
+}
+
+aside i{
+    max-width:20px;
+    height:20px;
+}
+aside a{
+    text-decoration:none;
+    color:white;
+}
+
+.my-hover:hover{
+    background-color:grey;
+}
+
 .mymain-container{
     width:calc(100% - var(--asidewidth));
     margin-left:var(--asidewidth);
