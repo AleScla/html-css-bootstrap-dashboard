@@ -64,45 +64,45 @@
                     <div class="container-fluid">
                         <div class="row flex-column justify-content-between h-100 text-center">
                             <div class="col text-white">
-                                <ul class="fa-ul">
+                                <ul class="p-0">
                                     <li class="my-3 my-hover">
                                         <a href="#">
-                                            <span class="fa-li">
+                                            <span>
                                                 <i class="fa-solid fa-house fa-lg"></i>
                                             </span>
-                                            <span class="fs-5">
+                                            <span class="fs-5 ps-2 d-none d-lg-inline">
                                                 Home
                                             </span>
                                         </a>
                                     </li>
-                                    <li class="mb-3">
+                                    <li class="mb-3 my-hover">
                                         <a href="#">
-                                            <span class="fa-li">
+                                            <span>
                                                 <i class="fa-solid fa-chart-simple fa-lg"></i>
                                             </span>
-                                            <span class="fs-5">
+                                            <span class="fs-5 ps-2 d-none d-lg-inline">
                                                 Stats
                                             </span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="my-hover">
                                         <a href="#">
-                                            <span class="fa-li">
+                                            <span>
                                                 <i class="fa-solid fa-signal fa-lg"></i>
                                             </span>
-                                            <span class="fs-5"> Signals</span>
+                                            <span class="fs-5 ps-2 d-none d-lg-inline"> Signals</span>
                                         </a>
                                     </li>
                                 </ul> 
                             </div>
                             <div class="col-auto text-white">
-                                <ul class="fa-ul">
-                                    <li class="my-3">
+                                <ul class="p-0">
+                                    <li class="my-3 my-hover">
                                         <a href="#">
-                                            <span class="fa-li">
-                                                <i class="fa-solid fa-gear"></i>
+                                            <span>
+                                                <i class="fa-solid fa-gear fa-lg"></i>
                                             </span>
-                                            <span class="fs-5">Admin</span>
+                                            <span class="fs-5 ps-2 d-none d-lg-inline">Admin</span>
                                         </a>
                                     </li>
                                 </ul>     
@@ -111,14 +111,108 @@
                     </div>
                 </aside>
                 <div class="mymain-container">
-                    <!-- sezione utility studenti -->
                     <section><!-- sezione utility studenti -->
                         <div class="container-fluid bg-primary">
                             <div class="row">
                                 <div class="col-12 col-md-4 col-lg-2 order-md-1 d-flex align-items-center py-3">
                                     <span class="text-white fs-5 me-2">Nuovo Studente</span>
-                                    <button type="button" class="btn btn-outline-light btn-lg">+</button>
-                                </div>
+                                    <!-- offcanvas -->
+                                    <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                                        +
+                                    </button>
+
+                                    <div class="w-100 offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Inserisci un nuovo studente</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                        </div>
+                                        <div class="offcanvas-body"> 
+                                            <form>
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="mb-3 col-12 col-md-6">
+                                                            <label for="name" class="form-label">
+                                                                Nome
+                                                            </label>
+                                                            <input type="text" class="form-control" id="name">
+                                                        </div>   
+                                                        <div class="mb-3 col-12 col-md-6">
+                                                            <label for="surname" class="form-label">
+                                                                Cognome
+                                                            </label>
+                                                            <input type="text" class="form-control" id="surname">
+                                                        </div>
+                                                        <div class="mb-3 col-12 col-md-6">
+                                                            <label for="email" class="form-label">
+                                                                E-mail
+                                                            </label>
+                                                            <div class="input-group">
+                                                                <span  class="input-group-text" id="basic-addon1">@</span>
+                                                                <input type="text" id="email" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 col-12 col-md-6">
+                                                            <label for="password" class="form-label">
+                                                                Password
+                                                            </label>
+                                                            <input type="password" class="form-control" id="password">
+                                                        </div>
+                                                        <div class="mb-3 col-12">
+                                                            <label for="address" class="form-label">
+                                                                Indirizzo
+                                                            </label>
+                                                            <input type="text" class="form-control" id="address">
+                                                        </div>
+                                                        <div class="mb-3 col-12 col-md-6">
+                                                            <label for="city" class="form-label">
+                                                                Città
+                                                            </label>
+                                                            <input type="text" class="form-control" id="city">
+                                                        </div>
+                                                        <div class="mb-3 col-12 col-md-4">
+                                                            <label for="state" class="form-label">
+                                                                Stato
+                                                            </label>
+                                                            <select id="state" class="form-select">
+                                                                <option selected hidden>Scegli...</option>
+                                                                <option>Italia</option>
+                                                                <option>Germania</option>
+                                                                <option>Austria</option>
+                                                                <option>Altro</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3 col-12 col-md-2">
+                                                            <label for="cap" class="form-label">
+                                                                CAP
+                                                            </label>
+                                                            <input type="text" class="form-control" id="cap">
+                                                        </div>
+                                                        <div class="mb-3 col-12">
+                                                            <label for="file" class="form-label">
+                                                                Città
+                                                            </label>
+                                                            <input type="file" class="form-control" id="file">
+                                                        </div>
+                                                        <div class="mb-3 form-check col-12">
+                                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                            <label class="form-check-label" for="exampleCheck1">
+                                                                Seleziona per proseguire
+                                                            </label>
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary col-auto me-2">
+                                                            Salva
+                                                        </button>
+                                                        <button class="btn btn-warning col-auto">
+                                                            Svuota
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                               
+                                            
+                                            </form>
+                                        </div>
+                                    </div> <!-- fine offcanvas -->
+                                </div> 
                                 <div class="col-12 col-md-4 col-lg-4 pb-3 py-md-3">
                                     <h2 class="text-white">Boolean <span class="badge rounded-4 mybg-darkerblue">Piano Blaze</span></h2>
                                     <span class="badge rounded-4 mybg-darkerblue">3 app</span>
